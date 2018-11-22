@@ -11,8 +11,9 @@ import ContentLayout from './components/layout/ContentLayout';
 
 import Login from './components/auth/Login';
 import Dashboard from './components/auth/Dashboard';
+import ListComponent from './components/auth/ListComponent';
 
-function App() {
+function App () {
   return (
     <Layout>
       <HeaderLayout />
@@ -22,6 +23,7 @@ function App() {
           <Router>
             <Login path="login" />
             <Dashboard path="dashboard" />
+            <ListComponent path="dashboard" />
           </Router>
         </ContentLayout>
       </Layout>

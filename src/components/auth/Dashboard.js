@@ -4,7 +4,7 @@ import { Pie } from '@nivo/pie';
 export default function Dashboard() {
   return (
     <Pie
-      width={900}
+      width={500}
       height={500}
       margin={{
         top: 80,
@@ -60,7 +60,7 @@ export default function Dashboard() {
         }
       ]}
       animate
-      innerRadius={0.6}
+      innerRadius={0.5}
     />
   );
 }
