@@ -1,17 +1,16 @@
 import React from 'react';
 import './App.css';
 import Layout from 'antd/lib/layout/layout';
-import Form from 'antd/lib/form/Form';
-import Input from 'antd/lib/input/Input';
-import Button from 'antd/lib/button/button';
-import Icon from 'antd/lib/icon';
-import FormItem from 'antd/lib/form/FormItem';
-import DatePicker from 'antd/lib/date-picker';
 import 'antd/lib/date-picker/style/css';
+
+import { Router } from '@reach/router';
 
 import SiderLayout from './components/layout/SiderLayout';
 import HeaderLayout from './components/layout/HeaderLayout';
 import ContentLayout from './components/layout/ContentLayout';
+
+import Login from './components/auth/Login';
+import Dashboard from './components/auth/Dashboard';
 
 function App() {
   return (
@@ -20,39 +19,10 @@ function App() {
       <Layout>
         <SiderLayout />
         <ContentLayout>
-          <Form layout="vertical">
-            <FormItem>
-              <Input
-                size="large"
-                prefix={
-                  <Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />
-                }
-                placeholder="Username"
-              />
-            </FormItem>
-            <FormItem>
-              <Input
-                size="large"
-                prefix={
-                  <Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />
-                }
-                placeholder="Username"
-              />
-            </FormItem>
-            <FormItem>
-              <DatePicker size="large" format="YYYY-MM-DD" />
-            </FormItem>
-            <FormItem>
-              <Button
-                size="large"
-                prefix={
-                  <Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />
-                }
-              >
-                Submit
-              </Button>
-            </FormItem>
-          </Form>
+          <Router>
+            <Login path="login" />
+            <Dashboard path="dashboard" />
+          </Router>
         </ContentLayout>
       </Layout>
     </Layout>

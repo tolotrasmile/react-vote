@@ -4,6 +4,8 @@ import Sider from 'antd/lib/layout/Sider';
 import Menu from 'antd/lib/menu';
 import Icon from 'antd/lib/icon/';
 
+import { Link } from '@reach/router';
+
 const SubMenu = Menu.SubMenu;
 
 function SiderLayout() {
@@ -16,8 +18,24 @@ function SiderLayout() {
         defaultOpenKeys={['sub1']}
         style={{ height: '100%', borderRight: 0 }}
       >
+        <Menu.Item key="login">
+          <Link to="login">
+            <span>
+              <Icon size="large" type="user" />
+              Login
+            </span>
+          </Link>
+        </Menu.Item>
+        <Menu.Item key="dashboard">
+          <Link to="dashboard">
+            <span>
+              <Icon size="large" type="user" />
+              Dashboard
+            </span>
+          </Link>
+        </Menu.Item>
         <SubMenu
-          key="sub1"
+          key="sub4"
           title={
             <span>
               <Icon size="large" type="user" />
@@ -26,27 +44,13 @@ function SiderLayout() {
           }
         >
           <Menu.ItemGroup key="g1" title="Item 1">
-            <Menu.Item key="1">Option 1</Menu.Item>
-            <Menu.Item key="2">Option 2</Menu.Item>
-          </Menu.ItemGroup>
-          <SubMenu
-            key="sub4"
-            title={
-              <span>
-                <Icon size="large" type="user" />
-                subnav 1
-              </span>
-            }
-          >
-            <Menu.ItemGroup key="g1" title="Item 1">
-              <Menu.Item key="1">Option 1</Menu.Item>
-              <Menu.Item key="2">Option 2</Menu.Item>
-            </Menu.ItemGroup>
             <Menu.Item key="1">option1</Menu.Item>
             <Menu.Item key="2">option2</Menu.Item>
+          </Menu.ItemGroup>
+          <Menu.ItemGroup key="g@" title="Item 1">
             <Menu.Item key="3">option3</Menu.Item>
             <Menu.Item key="4">option4</Menu.Item>
-          </SubMenu>
+          </Menu.ItemGroup>
         </SubMenu>
         <SubMenu
           key="sub2"
