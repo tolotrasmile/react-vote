@@ -30,7 +30,8 @@ function HeaderLayout () {
         backgroundColor: '#fff',
         paddingLeft: 20,
         paddingRight: 0,
-        marginBottom: 20,
+        marginBottom: 0,
+        zIndex: 9999,
         boxShadow: '0 2px 8px #f0f1f2'
       }}
     >

@@ -7,7 +7,7 @@ function ContentLayout({ children }) {
     <Layout
       style={{
         overflow: 'auto',
-        height: 'calc(100vh - 84px)',
+        height: 'calc(100vh - 64px)',
         background: '#fff'
       }}
     >
