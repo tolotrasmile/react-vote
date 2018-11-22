@@ -40,7 +40,7 @@ function App() {
               />
             </FormItem>
             <FormItem>
-              <DatePicker showTime format="YYYY-MM-DD HH:mm:ss" />
+              <DatePicker size="large" format="YYYY-MM-DD" />
             </FormItem>
             <FormItem>
               <Button
