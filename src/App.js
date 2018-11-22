@@ -15,7 +15,7 @@ import ListComponent from './components/auth/ListComponent';
 
 function App () {
   return (
-    <Layout>
+    <Layout style={{backgroundColor: '#fff'}}>
       <HeaderLayout />
       <Layout>
         <SiderLayout />
@@ -23,7 +23,7 @@ function App () {
           <Router>
             <Login path="login" />
             <Dashboard path="dashboard" />
-            <ListComponent path="dashboard" />
+            <ListComponent path="blog" />
           </Router>
         </ContentLayout>
       </Layout>

@@ -1,17 +1,37 @@
 import React from 'react';
 import Layout from 'antd/lib/layout/layout';
-import Menu from 'antd/lib/menu';
+import Button from 'antd/lib/button/button';
 
 const { Header } = Layout;
 
-function HeaderLayout() {
+function HeaderRightItem ({ children }) {
+  const baseStyle = {
+    alignItems: 'center',
+    display: 'flex',
+    flexBasis: 'auto',
+    flexGrow: 0,
+    flexShrink: 0,
+    justifyContent: 'center',
+    marginRight: 20,
+    fontSize: 18
+  };
+  return (
+    <div style={{ ...baseStyle }}>
+      {children}
+    </div>
+  )
+}
+
+function HeaderLayout () {
   return (
     <Header
       className="header"
       style={{
         backgroundColor: '#fff',
         paddingLeft: 20,
-        paddingRight: 0
+        paddingRight: 0,
+        marginBottom: 20,
+        boxShadow: '0 2px 8px #f0f1f2'
       }}
     >
       <div className="logo">
@@ -21,10 +41,18 @@ function HeaderLayout() {
         style={{
           float: 'right',
           display: 'flex',
-          justifyContent: 'space-between'
+          justifyContent: 'flex-end',
+          alignItems: 'center'
         }}
       >
-
+        <HeaderRightItem active={true}>
+          Tolotra Raharison
+        </HeaderRightItem>
+        <HeaderRightItem>
+          <Button size="large">
+            Logout
+          </Button>
+        </HeaderRightItem>
       </div>
     </Header>
   );
