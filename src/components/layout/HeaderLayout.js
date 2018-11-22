@@ -49,9 +49,7 @@ function HeaderLayout () {
           Tolotra Raharison
         </HeaderRightItem>
         <HeaderRightItem>
-          <Button size="large">
-            Logout
-          </Button>
+          <Button type="primary" shape="circle" icon="poweroff" size="large" />
         </HeaderRightItem>
       </div>
     </Header>
