@@ -8,10 +8,10 @@ function ContentLayout({ children }) {
       style={{
         overflow: 'auto',
         height: 'calc(100vh - 64px)',
-        background: '#fff'
+        background: '#fafafa'
       }}
     >
-      <Content style={{ padding: 24, margin: 0, minHeight: 1280 }}>
+      <Content style={{ padding: 0, margin: 0, minHeight: 1280 }}>
         {children}
       </Content>
     </Layout>

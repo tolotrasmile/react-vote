@@ -6,11 +6,9 @@ import Icon from 'antd/lib/icon/';
 
 import { Link } from '@reach/router';
 
-const SubMenu = Menu.SubMenu;
-
 function SiderLayout() {
   return (
-    <Sider width={250} style={{ background: '#fff' }}>
+    <Sider width={250} style={{ background: '#fff', marginRight: 2 }}>
       <Menu
         theme="light"
         mode="inline"
@@ -34,7 +32,7 @@ function SiderLayout() {
             </span>
           </Link>
         </Menu.Item>
-        <SubMenu
+        <Menu.SubMenu
           key="lists"
           title={
             <span>
@@ -44,36 +42,46 @@ function SiderLayout() {
           }
         >
           <Menu.Item key="persons">
-            <span>
-              <Icon type="user" />
-              Persons
-            </span>
+            <Link to="persons">
+              <span>
+                <Icon size="large" type="user" />
+                Persons
+              </span>
+            </Link>
           </Menu.Item>
           <Menu.Item key="confirmed">
-            <span>
-              <Icon type="user" />
-              Confirmed
-            </span>
+            <Link to="confirmed">
+              <span>
+                <Icon size="large" type="user" />
+                Confirmed
+              </span>
+            </Link>
           </Menu.Item>
           <Menu.Item key="christened">
-            <span>
-              <Icon type="user" />
-              Christened
-            </span>
+            <Link to="christened">
+              <span>
+                <Icon size="large" type="user" />
+                Christened
+              </span>
+            </Link>
           </Menu.Item>
-          <Menu.Item key="deacon">
-            <span>
-              <Icon type="user" />
-              Deacons
-            </span>
+          <Menu.Item key="deacons">
+            <Link to="deacons">
+              <span>
+                <Icon size="large" type="user" />
+                Deacon
+              </span>
+            </Link>
           </Menu.Item>
           <Menu.Item key="families">
-            <span>
-              <Icon type="user" />
-              Families
-            </span>
+            <Link to="families">
+              <span>
+                <Icon size="large" type="user" />
+                Families
+              </span>
+            </Link>
           </Menu.Item>
-        </SubMenu>
+        </Menu.SubMenu>
       </Menu>
     </Sider>
   );

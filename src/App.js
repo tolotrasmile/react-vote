@@ -13,9 +13,9 @@ import Login from './components/auth/Login';
 import Dashboard from './components/auth/Dashboard';
 import ListComponent from './components/auth/ListComponent';
 
-function App () {
+function App() {
   return (
-    <Layout style={{backgroundColor: '#fff'}}>
+    <Layout style={{ backgroundColor: '#fff' }}>
       <HeaderLayout />
       <Layout>
         <SiderLayout />
@@ -24,6 +24,11 @@ function App () {
             <Login path="login" />
             <Dashboard path="dashboard" />
             <ListComponent path="blog" />
+            <ListComponent path="pearsons" />
+            <ListComponent path="confirmed" />
+            <ListComponent path="christened" />
+            <ListComponent path="deacons" />
+            <ListComponent path="families" />
           </Router>
         </ContentLayout>
       </Layout>
