@@ -11,9 +11,7 @@ function ContentLayout({ children }) {
         background: '#fff'
       }}
     >
-      <Content
-        style={{ background: 'red', padding: 24, margin: 0, minHeight: 1280 }}
-      >
+      <Content style={{ padding: 24, margin: 0, minHeight: 1280 }}>
         {children}
       </Content>
     </Layout>
