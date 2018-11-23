@@ -12,6 +12,9 @@ import ContentLayout from './components/layout/ContentLayout';
 import Login from './components/auth/Login';
 import Dashboard from './components/auth/Dashboard';
 import ListComponent from './components/auth/ListComponent';
+import PersonRoute from './components/person/PersonRoute';
+import PersonDetail from './components/person/PersonDetail';
+import PersonList from './components/person/PersonList';
 
 function App() {
   return (
@@ -24,7 +27,10 @@ function App() {
             <Login path="login" />
             <Dashboard path="dashboard" />
             <ListComponent path="blog" />
-            <ListComponent path="pearsons" />
+            <PersonRoute path="persons">
+              <PersonList path="/" />
+              <PersonDetail path="/:id" />
+            </PersonRoute>
             <ListComponent path="confirmed" />
             <ListComponent path="christened" />
             <ListComponent path="deacons" />

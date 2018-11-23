@@ -4,6 +4,8 @@ import Avatar from 'antd/lib/avatar';
 import data from '../../api/list';
 import Icon from 'antd/lib/icon/';
 
+import { useSpring, Transition } from 'react-spring';
+
 const flex = {
   display: 'flex',
   alignItems: 'center',
@@ -20,6 +22,11 @@ const LeftButton = ({ onCLick, children, ...props }) => {
 
 function ListItem({ item }) {
   const [open, setOpen] = useState(false);
+
+  const [props] = useSpring({
+    to: { opacity: `${open ? 1 : 0}` },
+    from: { opacity: `${open ? 0 : 1}` }
+  });
 
   return (
     <div>
@@ -58,16 +65,21 @@ function ListItem({ item }) {
           </LeftButton>
         </div>
       </div>
-      {open && (
-        <div
-          style={{
-            padding: 20,
-            opacity: open ? 1 : 0
-          }}
-        >
-          <h1>{item.title}</h1>
-        </div>
-      )}
+      <Transition
+        items={open}
+        from={{ opacity: 0 }}
+        enter={{ opacity: 1 }}
+        leave={{ opacity: 0 }}
+      >
+        {open =>
+          open &&
+          (props => (
+            <div style={props}>
+              <h1>{item.title}</h1>
+            </div>
+          ))
+        }
+      </Transition>
     </div>
   );
 }
