@@ -15,6 +15,7 @@ import ListComponent from './components/auth/ListComponent';
 import PersonRoute from './components/person/PersonRoute';
 import PersonDetail from './components/person/PersonDetail';
 import PersonList from './components/person/PersonList';
+import Expandable from './components/Expandable';
 
 function App() {
   return (
@@ -26,7 +27,7 @@ function App() {
           <Router>
             <Login path="login" />
             <Dashboard path="dashboard" />
-            <ListComponent path="blog" />
+            <Expandable path="blog" />
             <PersonRoute path="persons">
               <PersonList path="/" />
               <PersonDetail path="/:id" />
